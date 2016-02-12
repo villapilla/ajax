@@ -1,0 +1,27 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+	Web developer: David Villaluenga Casasola
+   	From: Madrid, Spain
+
+/* THANKS */
+	Mr. Photoshop: Joao Ortiz
+	From: Madrid, Spain
+
+	Helper Man: Sergio Asenjo
+	From: Madrid, Spain
+	
+	Rigth Hand: Fco. Javier Ruiz-Toledo
+	From: Madrid, Spain
+
+	Knowledge: $Teacher
+	From: Madrid, Spain
+    	
+
+
+/* SITE */
+	Last update:2015/11/14
+	Language: Spanish
+	Doctype:HTML5
+	IDE: Sublime Text, Atom, Mozilla Firefox, Inkscape, Photoshop
