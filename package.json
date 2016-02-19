@@ -1,0 +1,42 @@
+{
+  "name": "application_html_js",
+  "description": "Project of html page with js",
+  "license": "ISC",
+  "version": "0.0.1",
+  "author": "David Villaluenga",
+  "keywords": [
+    "sample",
+    "js",
+    "karma"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/villapilla/JS.git"
+  },
+  "dependencies" : {
+        "grunt": "latest",
+        "grunt-cli": "latest",
+        "mocha": "latest",
+        "chai": "latest",
+        "showdown": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-concat": "latest",
+        "grunt-jslint": "latest",
+        "grunt-contrib-less": "latest",
+        "grunt-mocha-test": "latest",
+        "grunt-markdown": "latest",
+        "grunt-contrib-watch": "latest"
+    },
+  "devDependencies": {
+      "karma": "^0.13.19",
+      "karma-chai": "^0.1.0",
+      "karma-chrome-launcher": "^0.2.2",
+      "karma-cli": "^0.1.2",
+      "karma-firefox-launcher": "^0.1.7",
+      "karma-html2js-preprocessor": "^0.1.0",
+      "karma-mocha": "^0.2.1",
+      "karma-phantomjs-launcher": "^0.2.3",
+      "karma-slimerjs-launcher": "^0.2.0",
+      "phantomjs": "^1.9.19"
+  }
+}

@@ -12,6 +12,7 @@
     <meta name="author" content="David_Villaluenga">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1, user-scalable=no">
+    <script src="js/main.js"></script>
     <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
     <link href="lib/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -68,7 +69,7 @@
                 <div class="navbar-inverse side-collapse in">
                     <nav role="navigation" class="navbar-collapse">
                         <ul class="nav navbar-nav col-md-12">
-                            <li class="navbar-toggle">
+                            <li id="newproducts" class="navbar-toggle">
                                 <a href="#" id="new">
                                     Novedades
                                 </a>
@@ -108,10 +109,13 @@
                             </li>
                             <li class="display-md navbar-toggle"><a href="#">PC a medida</a></li>
                             <li id="search2" class="pull-rigth navbar-toggle">
-                                <div class="input-group col-md-12">
-                                    <input type="text" class="form-control" placeholder="Search" name="q">
+                                    <div class="input-group col-md-12 relative">
+                                
+                                    <input id="input_search" type="text" class="form-control" placeholder="Search" name="" autocomplete="off">
+                                    <ul id="option">
+                                    </ul>
                                     <div class="input-group-btn">
-                                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                        <button id="btn_search" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                                     </div>
                                 </div>
                             </li>
@@ -126,261 +130,209 @@
             <article id="novedades" class="col-md-12 display_md_up">
                 <h2>Nuevos Productos</h2>
                 <ul class="container">
-                <div id="carrusel1">
-                   <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/aerocool_strike_x_power_800w.jpg" alt="aerocool_strike-x">
-                            <span>
+                    <div id="carrusel1">
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/aerocool_strike_x_power_800w.jpg" alt="aerocool_strike-x">
+                                    <span>
                                 Aerocool Strike X
                             </span>
-                        </figure>
-                    </article>
-                </li>
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/gigabyte_geforce_titan_x_xtreme.jpg" alt="cryorig-h5">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/gigabyte_geforce_titan_x_xtreme.jpg" alt="cryorig-h5">
+                                    <span>
                                 Gigabyte Titan X 
                             </span>
-                        </figure>
-                    </article>
-                </li>
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/intel_i5_6600k_3_5ghz.jpg" alt="intel_i5">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/intel_i5_6600k_3_5ghz.jpg" alt="intel_i5">
+                                    <span>
                                 Intel i-5 3.5GHz
                             </span>
-                        </figure>
-                    </article>
-                </li> 
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/microsoft_xbox_360_controller.jpg" alt="microsoft_xbox_360_controller">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/microsoft_xbox_360_controller.jpg" alt="microsoft_xbox_360_controller">
+                                    <span>
                                 360 Controller
                             </span>
-                        </figure>
-                    </article>
-                </li>
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/nox_kyus_auriculares_gaming.jpg" alt="nox_kyus_auriculares">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/nox_kyus_auriculares_gaming.jpg" alt="nox_kyus_auriculares">
+                                    <span>
                                 Nox Kyus Gaming
                             </span>
-                        </figure>
-                    </article>
-                </li>
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/intel_i7_6700k_4_0ghz.jpg" alt="intel_i7_6700k">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/intel_i7_6700k_4_0ghz.jpg" alt="intel_i7_6700k">
+                                    <span>
                                 Intel i-7 4GHz
                             </span>
-                        </figure>
-                    </article>
-                </li> 
-            </div>
-            <div id="carrusel2">
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/nox_coolbay_sx_usb_3_0.jpg" alt="nox_coolbay_sx">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                    </div>
+                    <div id="carrusel2">
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/nox_coolbay_sx_usb_3_0.jpg" alt="nox_coolbay_sx">
+                                    <span>
                                 Nox Coolbay SX
                             </span>
-                        </figure>
-                    </article>
-                </li>
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/samsung_850_evo_ssd_series_500gb.jpg" alt="samsung_850_">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/samsung_850_evo_ssd_series_500gb.jpg" alt="samsung_850_">
+                                    <span>
                                 Samsung SSD 
                             </span>
-                        </figure>
-                    </article>
-                </li>
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/sapphire_r9_280x_vapor_x_tri.jpg" alt="sapphire_r9">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/sapphire_r9_280x_vapor_x_tri.jpg" alt="sapphire_r9">
+                                    <span>
                                 Sapphire R9 Vapor
                             </span>
-                        </figure>
-                    </article>
-                </li> 
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/nzxt_s340_con_ventana_negra_roja.jpg" alt="nzxt_s340">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/nzxt_s340_con_ventana_negra_roja.jpg" alt="nzxt_s340">
+                                    <span>
                                 NZXT S340
                             </span>
-                        </figure>
-                    </article>
-                </li>
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/seasonic_s12ii_bronze.jpg" alt="seasonic_s12ii">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/seasonic_s12ii_bronze.jpg" alt="seasonic_s12ii">
+                                    <span>
                                 Seasonic S12II
                             </span>
-                        </figure>
-                    </article>
-                </li>
-                <li class="producto col-md-2">
-                    <article>
-                        <figure>
-                            <img src="img/sandisk_ssd_plus_120gb_sata3.jpg" alt="sandisk_ssd_plus_120gb">
-                            <span>
+                                </figure>
+                            </article>
+                        </li>
+                        <li class="producto col-md-2">
+                            <article>
+                                <figure>
+                                    <img src="img/sandisk_ssd_plus_120gb_sata3.jpg" alt="sandisk_ssd_plus_120gb">
+                                    <span>
                                 Sandisk SSD 120Gb
                             </span>
-                        </figure>
-                    </article>
-                </li> 
-                </div>
+                                </figure>
+                            </article>
+                        </li>
+                    </div>
                 </ul>
                 <ul class="col-md-12">
-                    <li id="boton_carrusel1" class="col-md-1 col-md-offset-5"><div></div></li>
-                    <li id="boton_carrusel2" class="col-md-1"><div></div></li>
+                    <li id="boton_carrusel1" class="col-md-1 col-md-offset-5">
+                        <div></div>
+                    </li>
+                    <li id="boton_carrusel2" class="col-md-1">
+                        <div></div>
+                    </li>
             </article>
             <ul id="escaparate" class="col-md-12 col-sm-12 cols-xs-12">
-                <li class="producto col-md-4 col-sm-6 col-xs-12 componentes">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/cryorig-h5-universal.jpg" alt="cryorig-h5">
-                            <img class="display_hover back" src="img/cryorig-h5-universal2.jpg" height="264" width="264">
-                            <span>
-                                Criorig H7
-                            </span>
-                        </figure>
-                        <div class="ribbon"><span>OFERTA</span></div>
-                        <var>
-                            34,90 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="8">
+                    <article class="">
+                        <figure class=""><span class="">Asus Z97-Pro Gamer</span></figure>
+                        <var class="">136.00</var><img src="img/placas/asus_z97_pro_gamer.jpg" class="">    </article>
+                </li>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="12">
+                    <article class="">
+                        <figure class=""><img src="img/placas/asrock_980de3_u3s3.jpg" class=""><span class="">Asrock 980DE3/U3S3 Rev 2.0</span></figure>
+                        <var class="">59.95</var>
                     </article>
                 </li>
-                <li class="producto col-md-4 col-sm-6 col-xs-12 componentes">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/intel-core-i7-5960x-30ghz.jpg" alt="intel-i7">
-                            <img class="display_hover back" src="img/intel_core_i7_4790k_2.jpg" alt="intel-i7">
-                            <span>
-                                Intel Core i7 
-                            </span>
-                        </figure>
-                        <var>
-                            1334,90 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="14">
+                    <article class="">
+                        <figure class=""><img src="img/placas/gigabyte_z97_hd3.jpg" class=""><span class="">Gigabyte Z97-HD3</span></figure>
+                        <var class="">106.00</var>
                     </article>
                 </li>
-                <li class="producto col-md-4 col-sm-6 col-xs-12 componentes">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/adata-premier-pro-sp920-128gb-ssd.jpg" alt="ssd adata">
-                            <img class="display_hover back" src="img/adata2.jpg" alt="ssd adata">
-                            <span>
-                                    Adata SP920 256Gb SSD
-                                </span>
-                        </figure>
-                        <var>
-                            103,00 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="18">
+                    <article class="">
+                        <figure class=""><img src="img/procesadores/Intel Core i5-4460.jpg" class=""><span class="">Intel Core i5-4460 3.2Ghz</span></figure>
+                        <var class="">176.00</var>
                     </article>
                 </li>
-                <li class="producto col-md-4 col-sm-6 col-xs-12 new">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/gigabyte-z97x-gaming-gt.jpg" alt="placa gigabyte z97">
-                            <img class="display_hover back" src="img/gigabyte-z97x-gaming-gt2png.jpg" alt="placa gigabyte z97">
-                            <span>
-                                    Gigabyte Z97X-Gaming GT
-                                </span>
-                        </figure>
-                        <var>
-                            248,00 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="26">
+                    <article class="">
+                        <figure class=""><img src="img/procesadores/intel_i5_6600k_3_5ghz.jpg" class=""><span class="">Intel i5-6600K 3.5Ghz</span></figure>
+                        <var class="">257.00</var>
                     </article>
                 </li>
-                <li class="producto col-md-4 col-sm-6 col-xs-12 perifericos">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/a4tech-a9-bloody-gaming-mouse.jpg" alt="ratón a4Tech gaming">
-                            <img class="display_hover back" src="img/a4tech-bloody-v5m-x-glide-multi-core-gaming-2.jpg" alt="ratón a4Tech gaming">
-                            <span>
-                                    A4Tech A9 Bloody Gaming
-                                </span>
-                        </figure>
-                        <var>
-                            24,95 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="42">
+                    <article class="">
+                        <figure class=""><img src="img/graficas/asus_geforce_gtx_titan.jpg" class=""><span class="">Asus GeForce GTX Titan X</span></figure>
+                        <var class="">1118.00</var>
                     </article>
                 </li>
-                <li class="producto col-md-4 col-sm-6 col-xs-12 new">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/aerocool-gt-s-nera.jpg" alt="caja aerocool GT blanca">
-                            <img class="display_hover back" src="img/aerocool2-gt-s-negra.jpg" alt="caja aerocool GT blanca">
-                            <span>
-                                    Aerocool GT White
-                                </span>
-                        </figure>
-                        <var>
-                            37,00 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="48">
+                    <article class="">
+                        <figure class=""><img src="img/memorias/corsair_vengeance_lpx_ddr4.jpg" class=""><span class="">Corsair Vengeance LPX DDR4</span></figure>
+                        <var class="">116.00</var>
                     </article>
                 </li>
-                <li class="producto col-md-4 col-sm-6 col-xs-12 perifericos">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/acer-predator-xb1-28-ips-g-sync-4k.jpg" alt="acer-predator-xb1">
-                            <img class="display_hover back" src="img/acer-predator2-xb1-28-ips-g-sync-4k.jpg" alt="acer-predator-xb1-back">
-                            <span>
-                                    Acer Predator XB1
-                                </span>
-                        </figure>
-                        <var>
-                            615,00 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="49">
+                    <article class="">
+                        <figure class=""><img src="img/memorias/corsair_vengeance_ddr4.jpg" class=""><span class="">Corsair Vengeance Red DDR4</span></figure>
+                        <var class="">128.00</var>
                     </article>
                 </li>
-                <li class="producto col-md-4 col-sm-6 col-xs-12 componentes">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/inno3d-geforce-gtx-970-oc-4gb-gddr5.jpg" alt="tarjeta gráfica 970 4GB inno3D">
-                            <img class="display_hover back" src="img/inno3d-2geforce-gtx-970-oc-4gb-gddr5.jpg" alt="tarjeta gráfica 970 4GB inno3D">
-                            <span>
-                                   Inno3D GTX 970 OC 4gb DDR5
-                                </span>
-                        </figure>
-                        <var>
-                            345,00 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="60">
+                    <article class="">
+                        <figure class=""><img src="img/carcasas/nzxt_s340_con_ventana_negra_roja.jpg" class=""><span class="">NZXT S340 USB 3.0</span></figure>
+                        <var class="">66.95</var>
                     </article>
                 </li>
-                <li class="producto col-md-4 col-sm-6 col-xs-12 new">
-                    <article class="flip-container">
-                        <figure class="flipper">
-                            <img class="front" src="img/enermax-revolution-x-t-630w-modular.jpg" alt="fuente enermax 630w">
-                            <img class="display_hover back" src="img/enermax2-revolution-x-t-630w-modular.jpg" alt="fuente enermax 630w">
-                            <span>
-                                    Enermax X't 630w tModular
-                                </span>
-                        </figure>
-                        <var>
-                            98,50 €
-                        </var>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="62">
+                    <article class="">
+                        <figure class=""><img src="img/carcasas/sharkoon_vg4_w_negra_verde.jpg" class=""><span class="">Sharkoon VG4-W USB 3.0</span></figure>
+                        <var class="">37.95</var>
+                    </article>
+                </li>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="65">
+                    <article class="">
+                        <figure class=""><img src="img/carcasas/nox_hummer_zn_usb_3_0_negra.jpg" class=""><span class="">NOX Hummer ZN USB 3.0 Negra</span></figure>
+                        <var class="">79.90</var>
+                    </article>
+                </li>
+                <li class="producto col-md-4 col-sm-6 col-xs-12 col-lg-3" data-id="69">
+                    <article class="">
+                        <figure class=""><img src="img/fuentes/corsair_cx750m_750w_80plus.jpg" class=""><span class="">Corsair CX750M 750W 80</span></figure>
+                        <var class="">99.00</var>
                     </article>
                 </li>
             </ul>
@@ -422,7 +374,7 @@
         </footer>
     </main>
     <script src="lib/jquery-1.12.0.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="lib/app.js"></script>
     <script src="lib/bootstrap.min.js"></script>
 </body>
 

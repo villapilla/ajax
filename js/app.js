@@ -5,13 +5,10 @@ $(window).ready(function() {
         bodyWidth,
         contentPosition,
         timeoutCarrusel = createSetInterval();
-
-
-        
         //document.getElementById("new").parentElement.addEventListener("hover", changeProducts, false);
-        $("#new").on("mouseenter", changeProducts);
+        /*$("#new").on("mouseenter", changeProducts);
         $("#perifericos").on("mouseenter", changeProducts);
-        $("#componentes").on("mouseenter", changeProducts);
+        $("#componentes").on("mouseenter", changeProducts);*/
         function createSetInterval() {
             return window.setInterval(function () {
             if($("#carrusel1").position().left < 600) {
@@ -79,16 +76,7 @@ $(window).ready(function() {
         $(sel).toggleClass('in');
         $(sel2).toggleClass('out');
     });
-    //Resize dropdownMenu
-    /*$(window).on('resize', function () {
-        bodyWidth = document.body.clientWidth;
-        if(bodyWidth > 768 && bodyWidth < 992) {
-            $("#login ul").addClass("dropdown-menu");
-        } else {
-            $("#login ul").removeClass("dropdown-menu");
-        }
-    })*/
-    //Navigation menu follow
+
     $(document).on('scroll', function() {
         contentPosition = $('header').height() + 25;
         if (window.scrollY > contentPosition) {
